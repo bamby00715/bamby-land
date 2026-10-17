@@ -97,6 +97,7 @@ a { color: inherit; }
 }
 .nav-link:hover { background: var(--butter); border-color: var(--ink); transform: rotate(-2deg) translateY(-2px); }
 .nav-link.active { background: var(--pink); border-color: var(--ink); color: #fff; }
+.nav-ico { width: 1.1em; height: 1.1em; display: inline-block; vertical-align: -0.18em; }
 .nav-toggle {
   display: none; margin-left: auto;
   width: 42px; height: 42px; font-size: 1.2rem;
@@ -130,15 +131,18 @@ a { color: inherit; }
   color: var(--ink);
 }
 .hero-title-cn {
-  display: inline-block;
-  font-size: clamp(3rem, 8vw, 5.2rem);
-  letter-spacing: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 1048 / 630; /* 与剧照等比例，横向铺满 */
+  font-size: clamp(3.4rem, 9vw, 6.4rem);
+  letter-spacing: 10px;
   /* 夜景剧照背景 + 白字描影 */
   color: #fff;
-  text-shadow: 0 3px 0 rgba(43, 43, 43, 0.55), 0 0 16px rgba(43, 43, 43, 0.4);
-  padding: 26px 30px 14px;
+  text-shadow: 0 4px 0 rgba(43, 43, 43, 0.55), 0 0 18px rgba(43, 43, 43, 0.4);
   background:
-    linear-gradient(rgba(24, 34, 64, 0.16), rgba(24, 34, 64, 0.4)),
+    linear-gradient(rgba(24, 34, 64, 0.14), rgba(24, 34, 64, 0.38)),
     url("../img/hero-name-bg.jpg") center 30% / cover no-repeat;
   border: 3px solid var(--ink);
   border-radius: var(--wobble-c);
@@ -211,7 +215,7 @@ a { color: inherit; }
   transform: rotate(-4deg);
   margin-right: 10px;
 }
-.title-flower { width: 1.05em; height: 1.05em; display: block; }
+.title-emoji svg { width: 1.05em; height: 1.05em; display: block; }
 .section-subtitle { margin-top: 10px; font-weight: 700; color: var(--text-soft); }
 .title-doodle { width: 220px; height: 20px; margin: 12px auto 0; display: block; }
 
