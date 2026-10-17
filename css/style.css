@@ -132,17 +132,19 @@ a { color: inherit; }
 }
 .hero-title-cn {
   display: flex;
-  align-items: center;
+  align-items: flex-end; /* 文字沉底，不挡人物脸部 */
   justify-content: center;
   width: 100%;
   aspect-ratio: 1048 / 630; /* 与剧照等比例，横向铺满 */
+  padding-bottom: clamp(18px, 4.5%, 46px);
   font-size: clamp(3.4rem, 9vw, 6.4rem);
   letter-spacing: 10px;
+  line-height: 1;
   /* 夜景剧照背景 + 白字描影 */
   color: #fff;
   text-shadow: 0 4px 0 rgba(43, 43, 43, 0.55), 0 0 18px rgba(43, 43, 43, 0.4);
   background:
-    linear-gradient(rgba(24, 34, 64, 0.14), rgba(24, 34, 64, 0.38)),
+    linear-gradient(rgba(24, 34, 64, 0.05) 45%, rgba(24, 34, 64, 0.45)),
     url("../img/hero-name-bg.jpg") center 30% / cover no-repeat;
   border: 3px solid var(--ink);
   border-radius: var(--wobble-c);
